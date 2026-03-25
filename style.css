@@ -492,8 +492,8 @@ select {
     display: none;
 }
 
-@media (max-width: 480px) {
-    body {
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    html, body {
         overflow-x: hidden;
     }
 
@@ -501,19 +501,48 @@ select {
         display: none;
     }
 
-    .glass-background {
-        position: fixed;
-        background-color: #E6E6EF;
-        background: rgba(255, 255, 255, 0.1); 
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-        width: 70%;
-        z-index: 999;
-    }
-
     .flex-text {
         justify-content: end;
-        padding-right: 6rem;
+        padding-right: 1.5rem;
+    }
+
+    .main-image-container img {
+        height: 25rem;
+        width: 25rem;
+    }
+
+    .dark-overlay {
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .text-content {
+        margin-top: 22rem;
+    }
+
+    .text-image {
+        font-size: 2.4rem;
+    }
+
+    .description-text {
+        font-size: 1.2rem;
+    }
+
+    .explore-button {
+        display: inline-block;
+        margin-top: 2rem;
+        background-color: black;
+        padding: 1.3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 14rem;
+        border-radius: 1rem;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
     }
 }
