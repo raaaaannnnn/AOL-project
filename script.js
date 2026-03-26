@@ -14,6 +14,16 @@ function showPage(pageId) {
     window.scrollTo (0, 0);
 }
 
+function showSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'flex';
+}
+
+function hideSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'none';
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 
     const joinBtn = document.getElementById('joinBtn');
