@@ -8,20 +8,41 @@
 </head>
 
 <body>
-    <header class="glass-background">
-        <div class="flex-text">
-            <div class="logo">FONTDALE</div>
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar() class="close-button">
+                    <a href="#">
+                        <div class="close-btn">
+                            <span class="close">&times;</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="mobile"><a href="#" onclick="showPage('home')">HOME</a></li>
+                <li class="mobile"><a href="#" onclick="showPage('directory')">DIRECTORY</a></li>
+                <li class="mobile"><a href="#" onclick="showPage('events')">EVENTS</a></li>
+                <li class="mobile"><a href="#" onclick="showPage('about')">ABOUT</a></li>
+                <li class="mobile"><a href="#" onclick="showPage('newsletter')">NEWSLETTER</a></li>
+            </ul>
 
-            <nav>
-                <ul class="navbar">
-                    <li><a href="#" onclick="showPage('home')">HOME</a></li>
-                    <li><a href="#" onclick="showPage('directory')">DIRECTORY</a></li>
-                    <li><a href="#" onclick="showPage('events')">EVENTS</a></li>
-                    <li><a href="#" onclick="showPage('about')">ABOUT</a></li>
-                    <li><a href="#" onclick="showPage('newsletter')">NEWSLETTER</a></li>
-                </ul>
-            </nav>
-        </div>
+            <ul>
+                <li class="logo"><a href="#">FONTDALE</a></li>
+                <li><a href="#" onclick="showPage('home')">HOME</a></li>
+                <li><a href="#" onclick="showPage('directory')">DIRECTORY</a></li>
+                <li><a href="#" onclick="showPage('events')">EVENTS</a></li>
+                <li><a href="#" onclick="showPage('about')">ABOUT</a></li>
+                <li class="desktop"><a href="#" onclick="showPage('newsletter')">NEWSLETTER</a></li>
+                <li onclick=showSidebar()>
+                    <a href="#">
+                        <div class="menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <!--Home Page-->
