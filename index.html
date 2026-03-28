@@ -26,12 +26,12 @@
             </ul>
 
             <ul>
-                <li class="logo"><a href="#">FONTDALE</a></li>
-                <li><a href="#" onclick="showPage('home')">HOME</a></li>
-                <li><a href="#" onclick="showPage('directory')">DIRECTORY</a></li>
-                <li><a href="#" onclick="showPage('events')">EVENTS</a></li>
-                <li><a href="#" onclick="showPage('about')">ABOUT</a></li>
-                <li class="desktop"><a href="#" onclick="showPage('newsletter')">NEWSLETTER</a></li>
+                <div class="logo">FONTDALE</div>
+                <li class="hover"><a href="#" onclick="showPage('home')">HOME</a></li>
+                <li class="hover"><a href="#" onclick="showPage('directory')">DIRECTORY</a></li>
+                <li class="hover"><a href="#" onclick="showPage('events')">EVENTS</a></li>
+                <li class="hover"><a href="#" onclick="showPage('about')">ABOUT</a></li>
+                <li class="desktop hover"><a href="#" onclick="showPage('newsletter')">NEWSLETTER</a></li>
                 <li onclick=showSidebar()>
                     <a href="#">
                         <div class="menu">
@@ -269,8 +269,13 @@
 
             <div class="footer-item">
                 <h6>INFORMATION</h6>
-                <p>About Us</p>
-                <p>Directory</p>
+                <a href="#" onclick="showPage('about')">
+                    <p>About Us</p>
+                </a>
+
+                <a href="#" onclick="showPage('directory')">
+                    <p>Directory</p>
+                </a>
             </div>
 
             <div class="footer-item">
