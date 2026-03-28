@@ -2,16 +2,25 @@ function showPage(pageId) {
     const pages = document.querySelectorAll('.page-content');
 
     pages.forEach(page => {
-        page.style.display = 'none';
+        page.classList.remove('active');
+        setTimeout(() => {
+            if (!page.classList.contains('active')) {
+                page.style.display = 'none';
+            }
+        }, 500);
     });
 
     const selectedPage = document.getElementById(pageId);
 
     if (selectedPage) {
         selectedPage.style.display = 'block';
+
+        setTimeout(() => {
+            selectedPage.classList.add('active');
+        }, 10);
     }
 
-    window.scrollTo (0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function showSidebar() {
