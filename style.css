@@ -29,8 +29,6 @@ nav ul {
 
 nav li {
     height: 50px;
-    /* margin-right: 4.5rem;
-    margin-left: -2.25rem; */
 }
 
 nav a {
@@ -555,6 +553,7 @@ select {
         overflow-x: hidden;
     }
 
+    /* navbar */
     .sidebar {
         padding-top: 1rem;
         position: fixed;
@@ -626,9 +625,10 @@ select {
     }
 
     .close:hover {
-        color: #7A6363; /* Warna hover senada dengan tema header kamu */
+        color: #7A6363;
     }
 
+    /* home page */
     .main-fontdale {
         box-sizing: border-box;
     }
@@ -693,12 +693,227 @@ select {
         margin-top: 1.2rem;
     }
 
+    /* directory page */
+
+    .directory-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        text-align: center;
+        justify-content: center;
+        margin: 9rem auto 4rem auto;
+    }
+
+    .directory-title h1 {
+        margin: 0;
+        font-size: 3rem;
+    }
+
+    .directory-title p {
+        margin: 0;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .directory-container {
+        margin: 3rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5rem;
+        width: 100%;
+    }
+
+    .directory-background {
+        background: rgba(255, 255, 255, 0.4); 
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.05);
+        max-width: 90%;
+        height: 25rem;
+        border-radius: 2rem;
+
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        object-fit: cover;
+        box-sizing: border-box;
+    }
+
+    .directory-item img {
+        width: 100%;
+        height: 15rem;
+        object-fit: cover;
+        border-radius: 2rem;
+    }
+
+    .directory-text p {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        margin: 0;
+        /* max-width: 20rem; */
+    }
+
+    .text-title {
+        padding-top: 1.2rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .subtext-title {
+        line-height: 2rem;
+        font-size: 1.3rem;
+    }
+
+    .text-info {
+        color: #4A4A4A;
+        padding-bottom: 2rem;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+
+    /* events */
+    .events-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        text-align: center;
+        justify-content: center;
+        margin: 9rem auto 4rem auto;
+    }
+
+    .events-title h1 {
+        margin: 0;
+        font-size: 3rem;
+    }
+
+    .events-title p {
+        margin: 0;
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    .events-container {
+        display: grid;
+        grid-template-columns: repeat(1, 90%);
+        gap: 3rem;
+        flex-direction: column;
+        justify-content: center;
+        margin: 3rem auto;
+        align-items: center;
+        width: 100%;
+    }
+
+    .events-background {
+        background: rgba(255, 255, 255, 0.4); 
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.05);
+        width: 25rem;
+        height: 13rem;
+        border-radius: 2rem;
+        max-width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .events-text p {
+        padding: 0 2.5rem 0 2.5rem;
+        margin: 0;
+    }
+
+    .date {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+
+    .event-title {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    .event-info {
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+    }
+
+    /* about */
+    .about-container {
+        margin: 5rem auto 4rem auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .about-title {
+        display: contents;
+    }
+
+    .about-image {
+        position: relative;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        order: 2;
+    }
+
+    .about-image img {
+        width: 90%;
+        height: 100%;
+        display: block;
+        position: relative;
+        z-index: 1;
+        border-radius: 2rem;
+        margin-top: 1rem;
+        order: 2;
+    }
+
+    .about-title h1 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        order: 1;
+        text-align: center;
+    }
+
+    .about-title p {
+        margin: 1rem auto;
+        font-size: 1.2rem;
+        text-align: justify;
+        margin: 1rem auto;
+        max-width: 90%;
+        letter-spacing: 0.1rem;
+        order: 3;
+        line-height: 2rem;
+    }
+
+    .subtext-about {
+        padding-top: 1.2rem;
+    }
+
+    .dark-overlay-about {
+        position: absolute;
+        left: auto;
+        width: 90%;
+        height: 95%;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 2;
+        border-radius: 2rem;
+    }
+
+    /* footer */
     footer {
         margin-top: auto;
     }
 
     .footer-background {
-        margin: 7rem auto 0 auto;
+        margin: 3rem auto 0 auto;
         background-color: #343442;
         width: 100%;
     }
