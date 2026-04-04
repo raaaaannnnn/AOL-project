@@ -25,12 +25,16 @@ function showPage(pageId) {
 
 function showSidebar() {
     const sidebar = document.querySelector('.sidebar');
+    const menu = document.querySelector('.menu');
     sidebar.style.display = 'flex';
+    menu.style.display = 'none';
 }
 
 function hideSidebar() {
     const sidebar = document.querySelector('.sidebar');
+    const menu = document.querySelector('.menu');
     sidebar.style.display = 'none';
+    menu.style.display = 'flex';
 }
 
 document.addEventListener('DOMContentLoaded', function() {
