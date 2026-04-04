@@ -8,23 +8,23 @@
 </head>
 
 <body>
+    <ul class="sidebar">
+        <li onclick=hideSidebar() class="close-button">
+            <a href="#">
+                <div class="close-btn">
+                    <span class="close">&times;</span>
+                </div>
+            </a>
+        </li>
+        <li class="mobile"><a href="#" onclick="showPage('home')">HOME</a></li>
+        <li class="mobile"><a href="#" onclick="showPage('directory')">DIRECTORY</a></li>
+        <li class="mobile"><a href="#" onclick="showPage('events')">EVENTS</a></li>
+        <li class="mobile"><a href="#" onclick="showPage('about')">ABOUT</a></li>
+        <li class="mobile"><a href="#" onclick="showPage('newsletter')">NEWSLETTER</a></li>
+    </ul>
+
     <header>
         <nav>
-            <ul class="sidebar">
-                <li onclick=hideSidebar() class="close-button">
-                    <a href="#">
-                        <div class="close-btn">
-                            <span class="close">&times;</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="mobile"><a href="#" onclick="showPage('home')">HOME</a></li>
-                <li class="mobile"><a href="#" onclick="showPage('directory')">DIRECTORY</a></li>
-                <li class="mobile"><a href="#" onclick="showPage('events')">EVENTS</a></li>
-                <li class="mobile"><a href="#" onclick="showPage('about')">ABOUT</a></li>
-                <li class="mobile"><a href="#" onclick="showPage('newsletter')">NEWSLETTER</a></li>
-            </ul>
-
             <ul>
                 <div class="logo">FONTDALE</div>
                 <li class="hover"><a href="#" onclick="showPage('home')">HOME</a></li>
@@ -56,7 +56,7 @@
             <div class="text-content">
                 <h3 class="text-image">Luxury Retail</h3>
                 <p class="description-text">Welcome to FontDale, where global fashion meets contemporary urban lifestyle.</p>
-                <a href="#" class="explore-button">EXPLORE MORE</a>
+                <a href="#" class="explore-button" onclick="showPage('directory')">EXPLORE MORE</a>
             </div>
         </section>
 
