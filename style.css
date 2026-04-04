@@ -20,7 +20,7 @@ nav {
 }
 
 nav ul {
-    width: 100%;    
+    width: 100%;
     list-style: none;
     display: flex;
     justify-content: flex-end;
@@ -32,7 +32,7 @@ nav li {
     height: 50px;
 }
 
-nav a {
+nav a, a {
     height: 100%;
     text-decoration: none;
     display: flex;
@@ -80,13 +80,14 @@ nav a {
     top: 0;
     right: 0;
     height: 100vh;
-    width: 250px;
+    width: 220px;
     z-index: 999;
     background-color: rgba(255, 255, 255, 0.7); 
     backdrop-filter: blur(15px);
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
     margin: 0;
     padding: 0;
+    gap: 20px;
     
     display: none;
     flex-direction: column;
@@ -94,16 +95,17 @@ nav a {
     justify-content: flex-start;
 }
 
-.sidebar li {
+.mobile {
     width: 100%;
+    margin-left: 2rem;
+}
+
+.close-button {
+    margin-left: 2rem;
 }
 
 .sidebar a {
     width: 100%;
-}
-
-.mobile a:hover {
-    background-color: #f0f0f0;
 }
 
 .main-fontdale {
@@ -145,7 +147,7 @@ nav a {
     z-index: 3;
     color: white;
     text-align: center;
-    margin-top: 27rem;
+    margin-top: 27.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -165,9 +167,9 @@ nav a {
 
 .explore-button {
     display: inline-block;
-    margin-top: 6rem;
+    margin-top: 4rem;
     background-color: black;
-    padding: 1.3rem;
+    padding: 2.5rem;
     padding-left: 2rem;
     padding-right: 2rem;
     width: 14rem;
@@ -179,6 +181,7 @@ nav a {
     text-decoration: none;
     font-size: 1.3rem;
     letter-spacing: 0.3rem;
+    line-height: 0;
 }
 
 .explore-button:hover {
@@ -582,8 +585,8 @@ select {
         position: fixed;
         z-index: 9999;
         position: fixed;
-        background: rgba(255, 255, 255, 0.2); 
-        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.1); 
+        backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.2);
         box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
@@ -634,7 +637,6 @@ select {
     .close-btn {
         display: flex;
         justify-content: flex-start;
-        padding: 20px;
         padding-left: 0;
         padding-bottom: 0;
         padding-top: 0;
@@ -688,7 +690,7 @@ select {
 
     .explore-button {
         margin-top: 2rem;
-        padding: 1.2rem;
+        padding: 1.8rem;
         padding-left: 1rem;
         padding-right: 1rem;
         width: 13rem;
@@ -696,7 +698,7 @@ select {
     }
 
     .info-fontdale {
-        margin: 37rem auto 1rem auto;
+        margin: 35rem auto 2rem auto;
         width: 90%;
         height: 30rem;
         padding: 10% 0 10% 0;
@@ -743,7 +745,7 @@ select {
     }
 
     .directory-container {
-        margin: 3rem auto;
+        margin: 3rem auto 1rem auto;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -827,7 +829,7 @@ select {
         gap: 3rem;
         flex-direction: column;
         justify-content: center;
-        margin: 3rem auto;
+        margin: 3rem auto 1rem auto;
         align-items: center;
         width: 100%;
     }
@@ -955,6 +957,10 @@ select {
         margin: 0;
         font-size: 1.2rem;
         line-height: 3rem;
+    }
+
+    .footer-item a {
+        justify-content: center;
     }
 
     .footer-item p {
@@ -1109,7 +1115,7 @@ select {
 
     .explore-button {
         margin-top: 1.5rem;
-        padding: 1rem;
+        padding: 1.5rem;
         padding-left: 1rem;
         padding-right: 1rem;
         width: 12rem;
@@ -1126,6 +1132,8 @@ select {
 
     .directory-container {
         margin-top: 1rem;
+        margin-bottom: 1rem;
+        gap: 4rem;
     }
 
     .directory-title p {
@@ -1214,7 +1222,7 @@ select {
         gap: 3rem;
         flex-direction: column;
         justify-content: center;
-        margin: 3rem auto;
+        margin: 3rem auto 1rem auto;
         align-items: center;
         width: 100%;
     }
@@ -1301,8 +1309,14 @@ select {
         margin-top: 18.5rem;
     }
 
+    .explore-button {
+        padding: 1.3rem;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+    }
+
     .info-fontdale {
-        margin: 30rem auto 0 auto;
+        margin: 30rem auto 1rem auto;
         width: 90%;
         height: 30rem;
         padding: 10% 0 10% 0;
@@ -1388,7 +1402,7 @@ select {
     }
 
     .directory-container {
-        margin: 3rem auto;
+        margin: 3rem auto 1rem auto;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1474,7 +1488,7 @@ select {
         gap: 3rem;
         flex-direction: column;
         justify-content: center;
-        margin: 3rem auto;
+        margin: 3rem auto 1rem auto;
         align-items: center;
         width: 100%;
     }
@@ -1531,7 +1545,7 @@ select {
         font-size: 1.1rem;
         text-align: justify;
         max-width: 85%;
-        letter-spacing: 0.1rem;
+        letter-spacing: 0rem;
         order: 3;
         line-height: 2rem;
     }
