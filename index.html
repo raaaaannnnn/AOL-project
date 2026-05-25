@@ -3,296 +3,340 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>FontDale</title>
+    <link rel="stylesheet" href="/style/home.css">
+    <link rel="stylesheet" href="/style/navbar.css">
+    <link rel="stylesheet" href="/style/directory.css">
+    <link rel="stylesheet" href="/style/event.css">
+    <link rel="stylesheet" href="/style/about.css">
+    <link rel="stylesheet" href="/style/newsletter.css">
+    <link rel="stylesheet" href="/style/footer.css">
+
+    <link rel="stylesheet" href="/style/responsive.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
 </head>
 
 <body>
+    <div class="overlay"></div>
     <ul class="sidebar">
-        <li onclick=hideSidebar() class="close-button">
-            <a href="#">
-                <div class="close-btn">
-                    <span class="close">&times;</span>
-                </div>
-            </a>
-        </li>
-        <li class="mobile"><a href="#" onclick="showPage('home')">HOME</a></li>
-        <li class="mobile"><a href="#" onclick="showPage('directory')">DIRECTORY</a></li>
-        <li class="mobile"><a href="#" onclick="showPage('events')">EVENTS</a></li>
-        <li class="mobile"><a href="#" onclick="showPage('about')">ABOUT</a></li>
-        <li class="mobile"><a href="#" onclick="showPage('newsletter')">NEWSLETTER</a></li>
+        <li onclick="showPage('home')">HOME</li>
+        <li onclick="showPage('directory')">DIRECTORY</li>
+        <li onclick="showPage('event')">EVENTS</li>
+        <li onclick="showPage('about')">ABOUT</li>
+        <li onclick="showPage('newsletter')">NEWSLETTER</li>
     </ul>
 
     <header>
         <nav>
-            <ul>
-                <div class="logo">FONTDALE</div>
-                <li class="hover"><a href="#" onclick="showPage('home')">HOME</a></li>
-                <li class="hover"><a href="#" onclick="showPage('directory')">DIRECTORY</a></li>
-                <li class="hover"><a href="#" onclick="showPage('events')">EVENTS</a></li>
-                <li class="hover"><a href="#" onclick="showPage('about')">ABOUT</a></li>
-                <li class="desktop hover"><a href="#" onclick="showPage('newsletter')">NEWSLETTER</a></li>
-                <li onclick=showSidebar()>
-                    <a href="#">
-                        <div class="menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
+            <div class="head">
+                <div class="title">FONTDALE</div>
+
+                <ul class="desktop-menu">
+                    <li onclick="showPage('home')">HOME</li>
+                    <li onclick="showPage('directory')">DIRECTORY</li>
+                    <li onclick="showPage('event')">EVENTS</li>
+                    <li onclick="showPage('about')">ABOUT</li>
+                    <li onclick="showPage('newsletter')">NEWSLETTER</li>
+                </ul>
+
+                <button class="hamburger-menu" onclick="sidebarToggle()">       
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g>
+                                <rect fill-rule="nonzero" x="0" y="0" width="24" height="24"></rect>
+                                <line x1="5" y1="7" x2="19" y2="7" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></line>
+                                <line x1="5" y1="17" x2="19" y2="17" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></line>
+                                <line x1="5" y1="12" x2="19" y2="12" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></line>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+            </div>
         </nav>
     </header>
 
-    <!--Home Page-->
-    <div id="home" class="page-content">
-        <section class="main-fontdale">
-            <div class="main-image-container">
-                <img src="assets/fontdale.png" alt="fontdale">
-                <div class="dark-overlay"></div>
-            </div>
-            
-            <div class="text-content">
-                <h3 class="text-image">Luxury Retail</h3>
-                <p class="description-text">Welcome to FontDale, where global fashion meets contemporary urban lifestyle.</p>
-                <a href="#" class="explore-button" onclick="showPage('directory')">EXPLORE MORE</a>
-            </div>
-        </section>
+    <section id="home" class="page">
+        <div class="home-container">
+            <video src="assets/home.mp4" autoplay muted loop playsinline class="bg-video">
+            </video>
 
-        <section class="info-fontdale">
-            <div class="info-container">
-                <div class="info-item">
+            <div class="scroll-indicator">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36px" height="36px" viewBox="0 0 17 17">
+                    <path d="M12.146 6.146l0.707 0.707-4.353 4.354-4.354-4.353 0.707-0.707 3.647 3.646 3.646-3.647zM17 8.5c0 4.687-3.813 8.5-8.5 8.5s-8.5-3.813-8.5-8.5 3.813-8.5 8.5-8.5 8.5 3.813 8.5 8.5zM16 8.5c0-4.136-3.364-7.5-7.5-7.5s-7.5 3.364-7.5 7.5 3.364 7.5 7.5 7.5 7.5-3.364 7.5-7.5z" fill="#FFFFFF"></path>
+                </svg>
+
+                <h1>Scroll Down</h1>
+            </div>
+        </div>
+
+        <div class="main-information">
+            <div class="information-background">
+                <div class="information-items">
                     <h4>LOCATION</h4>
                     <p>Arcadia Circle, Central District</p>
                 </div>
 
-                <div class="info-item">
+                <div class="information-items">
                     <h4>HOURS</h4>
                     <p>Mon - Sun: 10:00 AM - 10:00 PM</p>
                 </div>
 
-                <div class="info-item">
+                <div class="information-items">
                     <h4>EXPERIENCE</h4>
                     <p>North Gallery & South Pavilion</p>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <!-- Directory -->
-    <div id="directory" class="page-content">
-        <section class="directory-title">
+    <section id="directory" class="page">
+        <div class="directory-title">
             <h1>The Directory</h1>
             <p>Curated selections from the world's most iconic brands.</p>
-        </section>
+        </div>
 
-        <section class="directory-container">
+        <div class="directory-container">
             <div class="directory-background">
-                <div class="directory-item">
-                    <img src="./assets/LV.png" alt="LV">
+                <div class="directory-items lv">
+                    <img src="/assets/louis-vuitton.jpg" alt="lv">
+                    <p class="lv-text">Louis Vuitton</p>
+                    <p>High-end sustainable fashion for the modern professional.</p>
                 </div>
-                <div class="directory-text">
-                    <p class="text-title">Fashion</p>
-                    <p class="subtext-title">Louis Vuitton</p>
-                    <p class="text-info">High-end sustainable fashion for the modern professional.</p>
+            </div>
+
+            <div class="directory-background rolex">
+                <div class="directory-items">
+                    <img src="assets/rolex.jpg" alt="rolex">
+                    <p class="rolex-text">Rolex</p>
+                    <p>Timeless precision craftsmanship for the ultimate statement.</p>
                 </div>
             </div>
 
             <div class="directory-background">
-                <div class="directory-item">
-                    <img src="./assets/rolex.png" alt="rolex">
-                </div>
-                <div class="directory-text">
-                    <p class="text-title">Watches</p>
-                    <p class="subtext-title">Rolex</p>
-                    <p class="text-info">Timeless precision craftsmanship for the ultimate statement.</p>
+                <div class="directory-items starbuck">
+                    <img src="assets/starbuck.jpg" alt="starbuck">
+                    <p class="rolex-text">Starbuck</p>
+                    <p>Third-place coffee experience for the daily ritual.</p>
                 </div>
             </div>
 
             <div class="directory-background">
-                <div class="directory-item">
-                    <img src="./assets/dining.png" alt="dining">
-                </div>
-                <div class="directory-text">
-                    <p class="text-title">Dining</p>
-                    <p class="subtext-title">The Sky Garden</p>
-                    <p class="text-info">Fine dining experience overlooking the Arcadia Circle.</p>
+                <div class="directory-items nike">
+                    <img src="assets/nike.jpg" alt="nike">
+                    <p class="rolex-text">Nike</p>
+                    <p>Performance-driven sportswear for the relentless athlete.</p>
                 </div>
             </div>
-        </section>
-    </div>
 
-    <!-- Events -->
-    <div id="events" class="page-content">
-        <section class="events-title">
+            <div class="directory-background">
+                <div class="directory-items popmart">
+                    <img src="assets/popmart.jpg" alt="popmart">
+                    <p class="rolex-text">Pop Mart</p>
+                    <p>Playful blind box art toys for the collector's joy.</p>
+                </div>
+            </div>
+
+            <div class="directory-background">
+                <div class="directory-items crocs">
+                    <img src="assets/crocs.jpg" alt="crocs">
+                    <p class="rolex-text">Crocs</p>
+                    <p>Comfortable, customizable clogs for the casual explorer.</p>
+                </div>
+            </div>
+
+            <div class="directory-background">
+                <div class="directory-items sushitei">
+                    <img src="assets/sushitei.jpg" alt="sushitei">
+                    <p class="rolex-text">Sushi Tei</p>
+                    <p>Modern Japanese dining for the adventurous food lover.</p>
+                </div>
+            </div>
+
+            <div class="directory-background">
+                <div class="directory-items shakeshack">
+                    <img src="assets/shakeshack.jpg" alt="shakeshack">
+                    <p class="rolex-text">Shake Shack</p>
+                    <p>Premium burgers and shakes for the modern fast-food craver.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="event" class="page">
+        <div class="event-title">
             <h1>The Events</h1>
             <p>Happening at FontDale</p>
-        </section>
+        </div>
 
-        <section class="events-container">
-            <div class="events-background">
-                <div class="events-text">
-                    <p class="date">Oct 15 - Oct 20</p>
-                    <p class="event-title">Autumn Fashion Gala</p>
-                    <p class="event-info">A showcase of upcoming seasonal trends at the North Gallery.</p>
+        <div class="event-container">
+            <div class="event-background">
+                <div class="event-items">
+                    <p>Oct 15 - Oct 20</p>
+                    <p>Autumn Fashion Gala</p>
+                    <p>A showcase of upcoming seasonal trends at the North Gallery.</p>
                 </div>
-            </div>
-            
-            <div class="events-background">
-                <div class="events-text">
-                    <p class="date">Nov 05, 2025</p>
-                    <p class="event-title">Lumen Skywalk Concert</p>
-                    <p class="event-info">Intimate acoustic performance under the stars.</p>
-                </div>
-            </div>
-            
-            <div class="events-background">
-                <div class="events-text">
-                    <p class="date">Dec 01 - Dec 24</p>
-                    <p class="event-title">Winter Wonderland</p>
-                    <p class="event-info">Our annual holiday market featuring local artisans and festive treats.</p>
-                </div>
-            </div>
-            
-            <div class="events-background">
-                <div class="events-text">
-                    <p class="date">Oct 15 - Oct 20</p>
-                    <p class="event-title">Autumn Fashion Gala</p>
-                    <p class="event-info">A showcase of upcoming seasonal trends at the North Gallery.</p>
-                </div>
-            </div>
-            
-            <div class="events-background">
-                <div class="events-text">
-                    <p class="date">Oct 15 - Oct 20</p>
-                    <p class="event-title">Autumn Fashion Gala</p>
-                    <p class="event-info">A showcase of upcoming seasonal trends at the North Gallery.</p>
-                </div>
-            </div>
-            
-            <div class="events-background">
-                <div class="events-text">
-                    <p class="date">Oct 15 - Oct 20</p>
-                    <p class="event-title">Autumn Fashion Gala</p>
-                    <p class="event-info">A showcase of upcoming seasonal trends at the North Gallery.</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- About -->
-    <div id="about" class="page-content">
-        <section class="about-container">
-            <div class="about-title">
-                <h1>About Us</h1>
-                <p class="subtext-about">FontDale was envisioned by Franz Diego in 2023. His vision was simple: to create a space where the elegance of traditional galleries meets the energy of a modern lifestyle hub.</p>
-                <br>
-                <p >Officially opened in 2025, the mall serves as a cornerstone of Arcadia Circle. What makes FontDale unique is the Lumen Skywalk—a signature architectural marvel connecting the North Gallery and South Pavilion, offering breathtaking views of the city.</p>
-                <br>
-                <p>Built with a commitment to quality and contemporary design, we prioritize sensory experiences, ensuring every visit feels like a journey.</p>
-                <br>
-                <p>This journey begins the moment you step through our doors. The North Gallery is designed as a sanctuary of curated luxury, where high-end fashion and artisanal boutiques are showcased with the quiet reverence of a museum. In contrast, the South Pavilion pulses with the kinetic energy of modern life, housing avant-garde tech spaces, interactive wellness studios, and a global culinary scene that caters to the city's boldest trendsetters.</p>
             </div>
 
-            <div class="about-image">
-                <img src="./assets/about.png" alt="fontdale">
-                <div class="dark-overlay-about"></div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Newsletter -->
-    <div id="newsletter" class="page-content">
-        <section class="newsletter-container">
-            <div class="newsletter-background">
-                <div class="newsletter-title">
-                    <h1>Join the FontDale Elite</h1>
-                    <p>Be the first to receive exclusive invitations to private showcases and seasonal gallery events.</p>
+            <div class="event-background">
+                <div class="event-items">
+                    <p>Nov 05, 2025</p>
+                    <p>Lumen Skywalk Concert</p>
+                    <p>Intimate acoustic performance under the stars.</p>
                 </div>
+            </div>
 
-                <div class="text">
+            <div class="event-background">
+                <div class="event-items">
+                    <p>Dec 01 - Dec 24</p>
+                    <p>Winter Wonderland</p>
+                    <p>Our annual holiday market featuring local artisans and festive treats.</p>
+                </div>
+            </div>
+
+            <div class="event-background">
+                <div class="event-items">
+                    <p>Dec 01 - Dec 24</p>
+                    <p>Winter Wonderland</p>
+                    <p>Our annual holiday market featuring local artisans and festive treats.</p>
+                </div>
+            </div>
+
+            <div class="event-background">
+                <div class="event-items">
+                    <p>Dec 01 - Dec 24</p>
+                    <p>Winter Wonderland</p>
+                    <p>Our annual holiday market featuring local artisans and festive treats.</p>
+                </div>
+            </div>
+
+            <div class="event-background">
+                <div class="event-items">
+                    <p>Dec 01 - Dec 24</p>
+                    <p>Winter Wonderland</p>
+                    <p>Our annual holiday market featuring local artisans and festive treats.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="page">
+        <div class="about-title">
+            <h1>About Us</h1>
+        </div>
+        <div class="about-container">
+            <img class="about-img" src="/assets/about.jpg" alt="about">
+            <p class="text-above">FontDale was envisioned by Franz Diego in 2023. His vision was simple: to create a space where the elegance of traditional galleries meets the energy of a modern lifestyle hub.</p>
+            <br>
+            <p>Officially opened in 2025, the mall serves as a cornerstone of Arcadia Circle. What makes FontDale unique is the Lumen Skywalk—a signature architectural marvel connecting the North Gallery and South Pavilion, offering breathtaking views of the city.</p>
+            <br>
+            <p>Built with a commitment to quality and contemporary design, we prioritize sensory experiences, ensuring every visit feels like a journey.</p>
+            <br>
+            <p class="text-below">This journey begins the moment you step through our doors. The North Gallery is designed as a sanctuary of curated luxury, where high-end fashion and artisanal boutiques are showcased with the quiet reverence of a museum. In contrast, the South Pavilion pulses with the kinetic energy of modern life, housing avant-garde tech spaces, interactive wellness studios, and a global culinary scene that caters to the city's boldest trendsetters.</p>
+        </div>
+    </section>
+
+    <section id="newsletter" class="page">
+        <div class="newsletter-container">
+
+        
+        <div class="newsletter-background">
+            <div class="newsletter-title">
+                <h1>Join the FontDale Elite</h1>
+                <p>Be the first to receive exclusive invitations to private showcases and seasonal gallery events.</p>
+            </div>
+
+            <div class="newsletter-items">
+                <div class="full-name">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" placeholder="Your Name">
-                    <p id="name-error" class="error-message">Name must be atleast 3 characters.</p>
+                    <input type="text" class="placeholder" placeholder="Your name">
                 </div>
-
-                <div class="text">
-                    <label for="name">Email Address</label>
-                    <input type="text" id="email" placeholder="John Doe">
-                    <p id="email-error" class="error-message">Please enter a valid email containing '@' and '.'.</p>
+                
+                <div class="email">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="placeholder" placeholder="example123@gmail.com">
                 </div>
-
-                <div class="text">
-                    <label for="name">Phone Number</label>
-                    <input type="text" id="phone" placeholder="John Doe">
-                    <p id="phone-error" class="error-message">Phone must be numberic and between 10 - 12 digits.</p>
+                
+                <div class="phone-number">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" class="placeholder" placeholder="ex: +62 123 456 789">
                 </div>
+                
+                <div class="topic-interest">
+                    <label for="topic">Topic Of Interest</label>
 
-                <div class="text">
-                    <label for="name">Topic of Interest</label>
-                    <select id="topic" name="topic">
-                        <option value="" disabled selected>Select an interest</option>
-                        <option value="luxury">Luxury Fashion</option>
-                        <option value="dining">Fine Dining</option>
-                        <option value="tech">Modern Technology</option>
-                    </select>
-                    <p id="topic-error" class="error-message">Please select a topic.</p>
+                    <div class="radio-group">
+                        <div class="radio-items">
+                            <input type="radio" id="btn1" name="topic" value="Fashion">
+                            <label for="btn1" class="option-button">Fashion</label>
+                        </div>
+                        <div class="radio-items">
+                            <input type="radio" id="btn2" name="topic" value="Dining">
+                            <label for="btn2" class="option-button">Dining</label>
+                        </div>
+                        <div class="radio-items">
+                            <input type="radio" id="btn3" name="topic" value="Technology">
+                            <label for="btn3" class="option-button">Technology</label>
+                        </div>
+                    </div>
+                    
                 </div>
-
-                <div class="text">
-                    <label for="name">Frequency</label>
-                    <select id="frequency" name="frequency">
+                
+                <div class="frequency-times">
+                    <label for="frequency">Frequency</label>
+                    <select name="frequency" id="times-frequency">
                         <option value="" disabled selected>Choose how often</option>
-                        <option value="luxury">Weekly Update</option>
-                        <option value="dining">Monthly Digest</option>
+                        <option value="weekly">Weekly Update</option>
+                        <option value="monthly">Monthly Digest</option>
                     </select>
-                    <p id="freq-error" class="error-message">Please choose an update frequency.</p>
+                    <p id="freq-error" class="error-message"></p>
                 </div>
 
-                <div class="join-button" id="joinBtn">
+                <div class="join-button" id="join-button">
                     <div class="join-background">
                         <p class="join-text">JOIN NOW</p>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+        </div>
+    </section>
 
-    <footer class="footer-background">
-        <section class="footer-container">
-            <div class="footer-item">
-                <h6>FONTDALE</h6>
-                <p>Premium Lifestyle Mall Envisioned By Franz Diego</p>
-                <p>Conceptualized In 2023, Officially Opened In 2025</p>
+    <footer>
+        <div class="main-footer">
+            <div class="footer-background">
+                <div class="footer-container">
+                    <div class="footer-item">
+                        <h6>FONTDALE</h6>
+                        <p class="footer-text">Premium Lifestyle Mall Envisioned By Franz Diego</p>
+                        <p>Conceptualized In 2023, Officially Opened In 2025</p>
+                    </div>
+
+                    <div class="footer-item">
+                        <h6>INFORMATION</h6>
+                        <a href="#" onclick="showPage('about')">
+                            <p class="footer-text">About Us</p>
+                        </a>
+
+                        <a href="#" onclick="showPage('directory')">
+                            <p>Directory</p>
+                        </a>
+                    </div>
+
+                    <div class="footer-item">
+                        <h6>CONTACT US</h6>
+                        <p class="footer-text">fontdale@gmail.com</p>
+                        <p>+62 123-456-789</p>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    <hr class="copyright-line">
+                    <p class="copyright-text">
+                        &copy;2026 FONTDALE Lifestyle Mall. All Rights Reserved.
+                    </p>
+                </div>
             </div>
-
-            <div class="footer-item">
-                <h6>INFORMATION</h6>
-                <a href="#" onclick="showPage('about')">
-                    <p>About Us</p>
-                </a>
-
-                <a href="#" onclick="showPage('directory')">
-                    <p>Directory</p>
-                </a>
-            </div>
-
-            <div class="footer-item">
-                <h6>CONTACT US</h6>
-                <p>fontdale@gmail.com</p>
-                <p>+62 123-456-789</p>
-            </div>
-        </section>
-
-        <section class="copyright-item">
-            <hr class="copyright-line">
-            <p class="copyright-text">
-                &copy;2026 FONTDALE Lifestyle Mall. All Rights Reserved.
-            </p>
-        </section>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
