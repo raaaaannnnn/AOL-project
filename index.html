@@ -29,7 +29,7 @@
     <header>
         <nav>
             <div class="head">
-                <div class="title">FONTDALE</div>
+                <div class="title" onclick="showPage('home')">FONTDALE</div>
 
                 <ul class="desktop-menu">
                     <li onclick="showPage('home')">HOME</li>
@@ -60,7 +60,7 @@
             <video src="assets/home.mp4" autoplay muted loop playsinline class="bg-video">
             </video>
 
-            <div class="scroll-indicator">
+            <div class="scroll-indicator" id="scroll-to">
                 <svg xmlns="http://www.w3.org/2000/svg" width="36px" height="36px" viewBox="0 0 17 17">
                     <path d="M12.146 6.146l0.707 0.707-4.353 4.354-4.354-4.353 0.707-0.707 3.647 3.646 3.646-3.647zM17 8.5c0 4.687-3.813 8.5-8.5 8.5s-8.5-3.813-8.5-8.5 3.813-8.5 8.5-8.5 8.5 3.813 8.5 8.5zM16 8.5c0-4.136-3.364-7.5-7.5-7.5s-7.5 3.364-7.5 7.5 3.364 7.5 7.5 7.5 7.5-3.364 7.5-7.5z" fill="#FFFFFF"></path>
                 </svg>
@@ -225,81 +225,83 @@
         </div>
         <div class="about-container">
             <img class="about-img" src="/assets/about.jpg" alt="about">
-            <p class="text-above">FontDale was envisioned by Franz Diego in 2023. His vision was simple: to create a space where the elegance of traditional galleries meets the energy of a modern lifestyle hub.</p>
-            <br>
-            <p>Officially opened in 2025, the mall serves as a cornerstone of Arcadia Circle. What makes FontDale unique is the Lumen Skywalk—a signature architectural marvel connecting the North Gallery and South Pavilion, offering breathtaking views of the city.</p>
-            <br>
-            <p>Built with a commitment to quality and contemporary design, we prioritize sensory experiences, ensuring every visit feels like a journey.</p>
-            <br>
-            <p class="text-below">This journey begins the moment you step through our doors. The North Gallery is designed as a sanctuary of curated luxury, where high-end fashion and artisanal boutiques are showcased with the quiet reverence of a museum. In contrast, the South Pavilion pulses with the kinetic energy of modern life, housing avant-garde tech spaces, interactive wellness studios, and a global culinary scene that caters to the city's boldest trendsetters.</p>
+            <div class="text-about">
+                <p class="text-above">FontDale was envisioned by Franz Diego in 2023. His vision was simple: to create a space where the elegance of traditional galleries meets the energy of a modern lifestyle hub.</p>
+                <br>
+                <p>Officially opened in 2025, the mall serves as a cornerstone of Arcadia Circle. What makes FontDale unique is the Lumen Skywalk—a signature architectural marvel connecting the North Gallery and South Pavilion, offering breathtaking views of the city.</p>
+                <br>
+                <p>Built with a commitment to quality and contemporary design, we prioritize sensory experiences, ensuring every visit feels like a journey.</p>
+                <br>
+                <p class="text-below">This journey begins the moment you step through our doors. The North Gallery is designed as a sanctuary of curated luxury, where high-end fashion and artisanal boutiques are showcased with the quiet reverence of a museum. In contrast, the South Pavilion pulses with the kinetic energy of modern life, housing avant-garde tech spaces, interactive wellness studios, and a global culinary scene that caters to the city's boldest trendsetters.</p>
+            </div>
         </div>
     </section>
 
-    <section id="newsletter" class="page">
+    <form id="newsletter" class="page">
         <div class="newsletter-container">
-
-        
-        <div class="newsletter-background">
-            <div class="newsletter-title">
-                <h1>Join the FontDale Elite</h1>
-                <p>Be the first to receive exclusive invitations to private showcases and seasonal gallery events.</p>
-            </div>
-
-            <div class="newsletter-items">
-                <div class="full-name">
-                    <label for="name">Full Name</label>
-                    <input type="text" class="placeholder" placeholder="Your name">
+            <div class="newsletter-background">
+                <div class="newsletter-title">
+                    <h1>Join the FontDale Elite</h1>
+                    <p>Be the first to receive exclusive invitations to private showcases and seasonal gallery events.</p>
                 </div>
-                
-                <div class="email">
-                    <label for="email">Email Address</label>
-                    <input type="email" class="placeholder" placeholder="example123@gmail.com">
-                </div>
-                
-                <div class="phone-number">
-                    <label for="phone">Phone Number</label>
-                    <input type="text" class="placeholder" placeholder="ex: +62 123 456 789">
-                </div>
-                
-                <div class="topic-interest">
-                    <label for="topic">Topic Of Interest</label>
 
-                    <div class="radio-group">
-                        <div class="radio-items">
-                            <input type="radio" id="btn1" name="topic" value="Fashion">
-                            <label for="btn1" class="option-button">Fashion</label>
-                        </div>
-                        <div class="radio-items">
-                            <input type="radio" id="btn2" name="topic" value="Dining">
-                            <label for="btn2" class="option-button">Dining</label>
-                        </div>
-                        <div class="radio-items">
-                            <input type="radio" id="btn3" name="topic" value="Technology">
-                            <label for="btn3" class="option-button">Technology</label>
-                        </div>
+                <div class="newsletter-items">
+                    <div class="full-name">
+                        <label for="name">Full Name</label>
+                        <input type="text" class="placeholder" placeholder="Your name">
+                        <p id="name-error" class="error-message"></p>
                     </div>
                     
-                </div>
-                
-                <div class="frequency-times">
-                    <label for="frequency">Frequency</label>
-                    <select name="frequency" id="times-frequency">
-                        <option value="" disabled selected>Choose how often</option>
-                        <option value="weekly">Weekly Update</option>
-                        <option value="monthly">Monthly Digest</option>
-                    </select>
-                    <p id="freq-error" class="error-message"></p>
-                </div>
+                    <div class="email">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="placeholder" placeholder="example123@gmail.com">
+                        <p id="email-error" class="error-message"></p>
+                    </div>
+                    
+                    <div class="phone-number">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" class="placeholder" placeholder="ex: +62 123 456 789">
+                        <p id="phone-error" class="error-message"></p>
+                    </div>
+                    
+                    <div class="topic-interest">
+                        <label for="topic">Topic Of Interest</label>
+                        <div class="radio-group">
+                            <div class="radio-items">
+                                <input type="radio" id="btn1" name="topic" value="Fashion">
+                                <label for="btn1" class="option-button">Fashion</label>
+                            </div>
+                            <div class="radio-items">
+                                <input type="radio" id="btn2" name="topic" value="Dining">
+                                <label for="btn2" class="option-button">Dining</label>
+                            </div>
+                            <div class="radio-items">
+                                <input type="radio" id="btn3" name="topic" value="Technology">
+                                <label for="btn3" class="option-button">Technology</label>
+                            </div>
+                        </div>
+                        <p id="topic-error" class="error-message"></p>
+                    </div>
+                    
+                    <div class="frequency-times">
+                        <label for="frequency">Frequency</label>
+                        <select name="frequency" id="times-frequency">
+                            <option value="" disabled selected>Choose how often</option>
+                            <option value="weekly">Weekly Update</option>
+                            <option value="monthly">Monthly Digest</option>
+                        </select>
+                        <p id="freq-error" class="error-message"></p>
+                    </div>
 
-                <div class="join-button" id="join-button">
-                    <div class="join-background">
-                        <p class="join-text">JOIN NOW</p>
+                    <div class="join-button" id="join-button">
+                        <div class="join-background">
+                            <p class="join-text">JOIN NOW</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-    </section>
+    </form>
 
     <footer>
         <div class="main-footer">
