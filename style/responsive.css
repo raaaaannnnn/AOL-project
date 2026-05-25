@@ -1,1 +1,144 @@
+@media (min-width: 570px) {
+    body {
+        overflow-x: hidden;
+    }
 
+    header, nav {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .desktop-menu {
+        display: flex;
+        flex-direction: row;
+        font-size: small;
+        color: white;
+        cursor: pointer;
+    }
+
+    .head {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.2rem 2rem;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+    .directory-container {
+        display: grid;
+        column-gap: 3rem;
+        grid-template-columns: repeat(2, minmax(16rem, 1fr));
+        width: 100%;
+        max-width: 16rem;
+        margin: 2rem auto 5rem auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .event-container {
+        display: grid;
+        column-gap: 3rem;
+        grid-template-columns: repeat(2, minmax(16rem, 1fr));
+        width: 100%;
+        max-width: 16rem;
+        margin: 2rem auto 5rem auto;
+    }
+
+    .about-container img {
+        height: 50vh;
+    }
+
+    input {
+        width: 97.5%;
+    }
+
+    .newsletter-background {
+        width: 50%;
+    }
+    
+    .footer-background {
+        height: 23rem;
+    }
+
+    .footer-item h6 {
+        font-size: large;
+    }
+
+    .footer-item p {
+        font-size: 1rem;
+    }
+
+    .copyright-line {
+        margin-top: 1rem;
+    }
+
+    .copyright-text {
+        color: white;
+        font-size: small;
+    }
+
+    @media (min-width: 600px) {
+        .head {
+            padding: 1.2rem 2rem;
+        }
+
+        .about-container img {
+            height: 60vh;
+        }
+    }
+
+    @media (min-width: 885px) {
+        .head {
+            padding: 1.2rem 3rem;
+        }
+        
+        .information-background {
+            flex-direction: row;
+            gap: 4rem;
+        }
+
+        .information-items h4 {
+            font-size: 1.4rem;
+        }
+
+        .information-items p {
+            font-size: 1.1rem;
+        }
+
+        .directory-container {
+            grid-template-columns: repeat(3, minmax(16rem, 1fr));
+        }
+
+        .event-container {
+            grid-template-columns: repeat(3, minmax(16rem, 1fr));
+        }
+
+        .footer-background {
+            flex-direction: column;
+            padding: 4rem 4rem;
+            height: auto;
+        }
+
+        .footer-container {
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: left;
+        }
+    }
+
+    @media (min-width: 1350px) {
+        .directory-container {
+            grid-template-columns: repeat(4, minmax(16rem, 1fr));
+        }
+
+        .event-container {
+            grid-template-columns: repeat(4, minmax(16rem, 1fr));
+        }
+    }
+}
