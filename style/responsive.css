@@ -18,8 +18,13 @@
         display: flex;
         flex-direction: row;
         font-size: small;
-        color: white;
+        color: rgb(230, 230, 230);
         cursor: pointer;
+    }
+
+    .desktop-menu li:hover {
+        color: white;
+        transition: 0.7s ease-out;
     }
 
     .head {
@@ -61,27 +66,6 @@
     .newsletter-background {
         width: 50%;
     }
-    
-    .footer-background {
-        height: 23rem;
-    }
-
-    .footer-item h6 {
-        font-size: large;
-    }
-
-    .footer-item p {
-        font-size: 1rem;
-    }
-
-    .copyright-line {
-        margin-top: 1rem;
-    }
-
-    .copyright-text {
-        color: white;
-        font-size: small;
-    }
 
     @media (min-width: 600px) {
         .head {
@@ -100,7 +84,8 @@
         
         .information-background {
             flex-direction: row;
-            gap: 4rem;
+            padding: 0 2rem 0 2rem;
+            justify-content: space-between;
         }
 
         .information-items h4 {
@@ -113,6 +98,28 @@
 
         .directory-container {
             grid-template-columns: repeat(3, minmax(16rem, 1fr));
+        }
+
+        .directory-background {
+            transform: scaleY(1);
+            transform-origin: center;
+            transition: transform 0.3s ease-out;
+            cursor: pointer;
+        }
+
+        .directory-background:hover {
+            transform: scaleY(1.08);
+        }
+
+        .event-background {
+            transform: scaleY(1);
+            transform-origin: center;
+            transition: transform 0.3s ease-out;
+            cursor: pointer;
+        }
+
+        .event-background:hover {
+            transform: scaleY(1.08);
         }
 
         .event-container {
@@ -130,15 +137,51 @@
             justify-content: space-between;
             text-align: left;
         }
+
+        .footer-item h6 {
+            font-size: large;
+        }
+
+        .footer-item p {
+            font-size: 1rem;
+        }
+
+        .copyright-text {
+            font-size: small;
+        }
     }
 
-    @media (min-width: 1350px) {
+    @media (min-width: 1200px) {
         .directory-container {
             grid-template-columns: repeat(4, minmax(16rem, 1fr));
         }
 
         .event-container {
             grid-template-columns: repeat(4, minmax(16rem, 1fr));
+        }
+
+        .information-background {
+            padding: 0 5rem 0 5rem;
+        }
+
+        .radio-items .option-button {
+            color: black;
+        }
+
+        .about-container {
+            flex-direction: row;
+        }
+
+        .text-about {
+            width: 50rem;
+            margin-top: 1.3rem;
+        }
+
+        .about-container img {
+            height: 70vh;
+            width: 30rem;
+            margin-left: 5rem;
+            margin-bottom: 4rem;
         }
     }
 }
